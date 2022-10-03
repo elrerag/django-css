@@ -15,7 +15,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CSRF_TRUSTED_ORIGINS = "https://8000-elrerag-djangocss-v5foffd78ks.ws-us69.gitpod.io"
+CSRF_TRUSTED_ORIGINS = ["https://8000-elrerag-djangocss-sg5mamldu95.ws-us69.gitpod.io"]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+
+INSTALLED_APPS += [
+    'persona.apps.PersonaConfig',
 ]
 
 MIDDLEWARE = [
